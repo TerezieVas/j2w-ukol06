@@ -16,6 +16,12 @@ public class VizitkaService {
         this.vizitkaRepository = vizitkaRepository;
     }
 
+    public Vizitka pridat(Vizitka vizitka) {
+        vizitka.setId(null);
+        vizitkaRepository.save(vizitka);
+        return vizitka;
+    }
+
     public Iterable<Vizitka> seznamVsech() {
         return vizitkaRepository.findAll();
     }
