@@ -41,7 +41,7 @@ seznamVsech */
         Optional<Vizitka> vizitka = vizitkaService.sezenId(id);
         if (vizitka.isPresent()) {
             return new ModelAndView("vizitka")
-                    .addObject("vizitka", vizitka);
+                    .addObject("vizitka", vizitka.get());
         } else {
             return ResponseEntity.notFound().build();
         }

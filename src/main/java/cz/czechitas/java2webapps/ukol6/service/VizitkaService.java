@@ -27,6 +27,6 @@ public class VizitkaService {
     }
 
     public Optional<Vizitka> sezenId (int id) {
-        return vizitkaRepository.getById(id);
+        return vizitkaRepository.findById(id);
     }
 }

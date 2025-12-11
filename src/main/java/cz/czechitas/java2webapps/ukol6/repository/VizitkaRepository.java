@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface VizitkaRepository extends CrudRepository<Vizitka, Integer> {
     List<Vizitka> id(Integer id);
 
-    Optional<Vizitka> getById(int id);
+    Optional<Vizitka> getById(int id);//ted je tady tato metoda zbytečná. Použitá findById se nemusela vytvářet - je poděděná.
 }
